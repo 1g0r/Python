@@ -7,14 +7,14 @@ def __call(arg, fn):
 
 def pipe(*funcs):
   if not funcs:
-    raise Exception('Suply functions to the pipe finction!')
+    raise Exception('Supply functions to the pipe function!')
   def __run_pipe(data):
     return reduce(__call, funcs, data)
   return __run_pipe
 
 def compose(*funcs):
   if not funcs:
-    raise Exception('Suply functions to the compose finction!')
+    raise Exception('Supply functions to the compose function!')
   def __run_compose(data):
     return reduce(__call, reversed(funcs), data)
   return __run_compose

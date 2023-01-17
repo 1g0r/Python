@@ -33,7 +33,7 @@ def wf(fn1):
             funcs.append(fn2)
             return _n
         for fn in reversed(funcs):
+            return _n
 
-    return _n
 t=wf(a)(b)(c)
 t(0)ls
